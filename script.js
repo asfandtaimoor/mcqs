@@ -41,38 +41,49 @@ function loadQuestion() {
             let D = user[i].Answer;
 
 
+            // setting option values to the variables
+            let optionA = document.getElementById('optionA');
+            let optionB = document.getElementById('optionB');
+            let optionC = document.getElementById('optionC');
+            let optionD = document.getElementById('optionD');
+
+
             // option A functionality
-            document.getElementById('optionA').addEventListener('click', () => {
+            optionA.addEventListener('click', () => {
                 let Selected = 'A';
                 if (A == Selected) {
-                    console.log("All set")
+
+                    optionA.style.backgroundColor = "green";
                 }
 
             });
 
             // option B  functionality
-            document.getElementById('optionB').addEventListener('click', () => {
+            optionB.addEventListener('click', () => {
                 let Selected = 'B';
                 if (B == Selected) {
-                    console.log("All set")
+
+                    optionB.style.backgroundColor = "green";
                 }
 
             });
 
             // option C  functionality
-            document.getElementById('optionC').addEventListener('click', () => {
+            optionC.addEventListener('click', () => {
                 let Selected = 'C';
                 if (C == Selected) {
-                    console.log("All set")
+
+                    optionC.style.backgroundColor = "green";
                 }
 
             });
 
             // option D  functionality
-            document.getElementById('optionD').addEventListener('click', () => {
+            optionD.addEventListener('click', () => {
                 let Selected = 'D';
                 if (D == Selected) {
-                    console.log("All set")
+
+                    optionD.style.backgroundColor = "green";
                 }
 
             });
