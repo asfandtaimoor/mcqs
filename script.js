@@ -24,15 +24,61 @@ function loadQuestion() {
         
         <ul>
         <li>${user[i].question}</li>
-        <li onclick='a()'>${user[i].A}</li>
-        <li onclick='b()'>${user[i].B}</li>
-        <li onclick='c()'>${user[i].C}</li>
-        <li onclick='d()'>${user[i].D}</li>
+        <li id="optionA">${user[i].A}</li>
+        <li id="optionB">${user[i].B}</li>
+        <li id="optionC">${user[i].C}</li>
+        <li id="optionD">${user[i].D}</li>
         </ul>`;
 
 
-
+            // output data
             document.getElementById('userdata').innerHTML = output;
+
+            // Assgining option to variable values
+            let A = user[i].Answer;
+            let B = user[i].Answer;
+            let C = user[i].Answer;
+            let D = user[i].Answer;
+
+
+            // option A functionality
+            document.getElementById('optionA').addEventListener('click', () => {
+                let Selected = 'A';
+                if (A == Selected) {
+                    console.log("All set")
+                }
+
+            });
+
+            // option B  functionality
+            document.getElementById('optionB').addEventListener('click', () => {
+                let Selected = 'B';
+                if (B == Selected) {
+                    console.log("All set")
+                }
+
+            });
+
+            // option C  functionality
+            document.getElementById('optionC').addEventListener('click', () => {
+                let Selected = 'C';
+                if (C == Selected) {
+                    console.log("All set")
+                }
+
+            });
+
+            // option D  functionality
+            document.getElementById('optionD').addEventListener('click', () => {
+                let Selected = 'D';
+                if (D == Selected) {
+                    console.log("All set")
+                }
+
+            });
+
+
+
 
         }
     }
@@ -40,37 +86,8 @@ function loadQuestion() {
     xhr.send();
 
 
-    // 1st option
-    function a() {
-        let Selected = A;
-        console.log('You Selected option A');
-
-    }
-
-    // 2nd option
-
-    function b() {
-        let Selected = B;
-        if (this.user[i].answer == Selected) {
 
 
-            console.log('You Selected option B');
-
-        }
-
-    }
-
-    //3rd option
-    function c() {
-        let Selected = C;
-        console.log('You Selected option C');
-    }
-
-    //4rth option
-    function d() {
-        let Selected = D;
-        console.log('You Selected option D');
-    }
 
     i++;
 }
