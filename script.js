@@ -52,8 +52,8 @@ function loadQuestion() {
             optionA.addEventListener('click', () => {
                 let Selected = 'A';
                 if (A == Selected) {
-
                     optionA.style.backgroundColor = "green";
+                    loadQuestion();
                 }
 
             });
@@ -62,8 +62,8 @@ function loadQuestion() {
             optionB.addEventListener('click', () => {
                 let Selected = 'B';
                 if (B == Selected) {
-
                     optionB.style.backgroundColor = "green";
+                    loadQuestion();
                 }
 
             });
@@ -72,8 +72,8 @@ function loadQuestion() {
             optionC.addEventListener('click', () => {
                 let Selected = 'C';
                 if (C == Selected) {
-
                     optionC.style.backgroundColor = "green";
+                    loadQuestion();
                 }
 
             });
@@ -82,8 +82,8 @@ function loadQuestion() {
             optionD.addEventListener('click', () => {
                 let Selected = 'D';
                 if (D == Selected) {
-
                     optionD.style.backgroundColor = "green";
+                    loadQuestion();
                 }
 
             });
