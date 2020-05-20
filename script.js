@@ -2,7 +2,7 @@ document.getElementById('nextQ1').addEventListener('click', loadQuestion);
 document.getElementById('nextQ').addEventListener('click', loadQuestion);
 
 let i = -1;
-
+let totalNumber = 0;
 
 // Changing the question after clicking next button
 
@@ -53,8 +53,9 @@ function loadQuestion() {
                 let Selected = 'A';
                 if (A == Selected) {
                     optionA.style.backgroundColor = "green";
-                    loadQuestion();
+                    totalNumber++;
                 }
+                loadQuestion();
 
             });
 
@@ -63,8 +64,9 @@ function loadQuestion() {
                 let Selected = 'B';
                 if (B == Selected) {
                     optionB.style.backgroundColor = "green";
-                    loadQuestion();
+                    totalNumber++;
                 }
+                setTimeout(loadQuestion, 500);
 
             });
 
@@ -73,9 +75,9 @@ function loadQuestion() {
                 let Selected = 'C';
                 if (C == Selected) {
                     optionC.style.backgroundColor = "green";
-                    loadQuestion();
+                    totalNumber++;
                 }
-
+                loadQuestion();
             });
 
             // option D  functionality
@@ -83,8 +85,9 @@ function loadQuestion() {
                 let Selected = 'D';
                 if (D == Selected) {
                     optionD.style.backgroundColor = "green";
-                    loadQuestion();
+                    totalNumber++;
                 }
+                loadQuestion();
 
             });
 
@@ -101,4 +104,6 @@ function loadQuestion() {
 
 
     i++;
+
+    console.log(`YOur total number is ${totalNumber}`);
 }
