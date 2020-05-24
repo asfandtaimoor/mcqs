@@ -1,4 +1,10 @@
-document.getElementById('nextQ').addEventListener('click', loadQuestion);
+// Accessing html blocks
+let nextButton = document.getElementById('nextQ');
+let dataBlock = document.getElementById('userdata'); // Main block to show the data
+
+// Assigning funciton to the next button
+nextButton.addEventListener('click', loadQuestion);
+
 
 let i = -1;
 let totalNumber = 0;
@@ -10,12 +16,11 @@ function loadQuestion() {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'data.json', true);
 
+
     xhr.onload = function() {
-        if (this.status == 200) {
+        let user = JSON.parse(this.responseText);
 
-            let user = JSON.parse(this.responseText);
-
-            let length = 'user.length;';
+        if (this.status == 200 && i < user.length) {
 
             let output = '';
             output = `
@@ -30,7 +35,7 @@ function loadQuestion() {
 
 
             // output data
-            document.getElementById('userdata').innerHTML = output;
+            dataBlock.innerHTML = output;
 
             // Assgining option to variable values
             let A = user[i].Answer;
@@ -92,7 +97,13 @@ function loadQuestion() {
 
 
 
+        } else {
+
+            dataBlock.style.display = "none";
+            nextButton.style.display = "none";
+
         }
+
     }
 
     xhr.send();
