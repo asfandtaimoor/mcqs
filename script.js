@@ -1,7 +1,10 @@
 // Accessing html blocks
 let nextButton = document.getElementById('nextQ');
-let showResult = document.getElementById('showResult');
+let getNumber = document.getElementById('getNumber');
 let dataBlock = document.getElementById('userdata'); // Main block to show the data
+let resultCard = document.getElementById('resultCard');
+
+
 
 // Assigning funciton to the next button
 nextButton.addEventListener('click', loadQuestion);
@@ -102,8 +105,13 @@ function loadQuestion() {
 
             dataBlock.style.display = "none";
             nextButton.style.display = "none";
-            let acuiredNumber = `Your total number is ${totalNumber}`
-            showResult.innerHTML = acuiredNumber;
+            getNumber.innerHTML = acuiredNumber;
+
+            // display the result card when the result is ended
+            resultCard.style.display = "block";
+
+            // Student get number in the test
+            let acuiredNumber = `Your getted number is ${totalNumber}`
         }
 
     }
