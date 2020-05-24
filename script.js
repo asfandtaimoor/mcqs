@@ -1,4 +1,3 @@
-document.getElementById('nextQ1').addEventListener('click', loadQuestion);
 document.getElementById('nextQ').addEventListener('click', loadQuestion);
 
 let i = -1;
@@ -7,9 +6,6 @@ let totalNumber = 0;
 // Changing the question after clicking next button
 
 function loadQuestion() {
-    // Hiding the start button after click
-    document.getElementById('nextQ1').style.display = 'none';
-
 
     let xhr = new XMLHttpRequest();
     xhr.open('GET', 'data.json', true);
@@ -18,6 +14,8 @@ function loadQuestion() {
         if (this.status == 200) {
 
             let user = JSON.parse(this.responseText);
+
+            let length = 'user.length;';
 
             let output = '';
             output = `
@@ -107,3 +105,6 @@ function loadQuestion() {
 
     console.log(`YOur total number is ${totalNumber}`);
 }
+
+
+console.log(length);
