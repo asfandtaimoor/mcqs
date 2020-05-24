@@ -1,5 +1,6 @@
 // Accessing html blocks
 let nextButton = document.getElementById('nextQ');
+let showResult = document.getElementById('showResult');
 let dataBlock = document.getElementById('userdata'); // Main block to show the data
 
 // Assigning funciton to the next button
@@ -101,7 +102,8 @@ function loadQuestion() {
 
             dataBlock.style.display = "none";
             nextButton.style.display = "none";
-
+            let acuiredNumber = `Your total number is ${totalNumber}`
+            showResult.innerHTML = acuiredNumber;
         }
 
     }
@@ -114,7 +116,7 @@ function loadQuestion() {
 
     i++;
 
-    console.log(`YOur total number is ${totalNumber}`);
+
 }
 
 
